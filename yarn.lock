@@ -341,6 +341,16 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+headlessui@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/headlessui/-/headlessui-0.0.0.tgz#bffbc91c40e9a6fa09c1e6064caaa670cabc68c0"
+  integrity sha512-CHvacVPbl8AqIg2sBNKySUmumu7o15jSrCaTrIh9GW2Eq4y/krCN/vZFOsKCwlrhWQbO4267a8xvvP8bs+qREQ==
+
+heroicons@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/heroicons/-/heroicons-2.0.5.tgz#12f375e987d19c93d7964fe66b77848dbc0fde3f"
+  integrity sha512-CW6+NslIg0FUSLPFV/YYS8wPCpIMgvSO3PmFepK+sz/CiakPRtDMaxyVtzrm2TwieNVrn+vzZPgzdyks6xV6Jg==
+
 is-binary-path@~2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-binary-path/-/is-binary-path-2.1.0.tgz#ea1f7f3b80f064236e83470f86c09c254fb45b09"
