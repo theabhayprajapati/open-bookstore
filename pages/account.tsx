@@ -5,7 +5,7 @@ const Account = () => {
   return (
     <div>
       <div className="p-5">
-        <PageHeader title={"Account"} />
+        <PageHeader title={"Account"} type={"heading"}/>
       </div>
       <BottomNavigation />
     </div>

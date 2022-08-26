@@ -1,10 +1,13 @@
 
+const NORMAL_COLOR = '#B3B3B3';
+const ACTIVE_COLOR = '#ffffff';
 const BottomNavigation = () => {
+    
     return (
         <div>
             <div className="w-full h-screen">
                 {/* <!-- <section id="bottom-navigation" className="md:hidden block fixed inset-x-0 bottom-0 z-10 bg-white shadow"> // if shown only tablet/mobile--> */}
-                <section id="bottom-navigation" className="block fixed inset-x-0 bottom-0 z-10  shadow text-white bg-gradient-to-b from-transparent via-black to-black">
+                <section id="bottom-navigation" className="block fixed inset-x-0 bottom-0 z-10  shadow text-[#B3B3B3] bg-gradient-to-b from-transparent via-black to-black">
                     <div id="tabs" className="flex justify-between ">
                         <a href="/" className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
                             <svg width="25" height="25" viewBox="0 0 42 42" className="inline-block mb-1">
