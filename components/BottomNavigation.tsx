@@ -1,15 +1,23 @@
+import { useRouter } from "next/router";
 
 const NORMAL_COLOR = '#B3B3B3';
 const ACTIVE_COLOR = '#ffffff';
 const BottomNavigation = () => {
-    
+    const router = useRouter();
+    // get current page
+    const currentPage = router.pathname;
+    console.log(currentPage);
     return (
         <div>
             <div className="w-full h-screen">
                 {/* <!-- <section id="bottom-navigation" className="md:hidden block fixed inset-x-0 bottom-0 z-10 bg-white shadow"> // if shown only tablet/mobile--> */}
                 <section id="bottom-navigation" className="block fixed inset-x-0 bottom-0 z-10  shadow text-[#B3B3B3] bg-gradient-to-b from-transparent via-black to-black">
                     <div id="tabs" className="flex justify-between ">
-                        <a href="/" className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
+                        <a href="/" className="w-full focus:text-white hover:text-white justify-center inline-block text-center pt-2 pb-1"
+                            style={{
+                                color: currentPage === '/' ? ACTIVE_COLOR : NORMAL_COLOR
+                            }}
+                        >
                             <svg width="25" height="25" viewBox="0 0 42 42" className="inline-block mb-1">
                                 <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                                     <path d="M21.0847458,3.38674884 C17.8305085,7.08474576 17.8305085,10.7827427 21.0847458,14.4807396 C24.3389831,18.1787365 24.3389831,22.5701079 21.0847458,27.6548536 L21.0847458,42 L8.06779661,41.3066256 L6,38.5331279 L6,26.2681048 L6,17.2542373 L8.88135593,12.4006163 L21.0847458,2 L21.0847458,3.38674884 Z" fill="currentColor" fillOpacity="0.1"></path>
@@ -21,7 +29,12 @@ const BottomNavigation = () => {
                             </svg>
                             <span className="tab tab-home block text-xs">Home</span>
                         </a>
-                        <a href="/library" className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
+                        <a href="/library" className="w-full focus:text-white hover:text-white justify-center inline-block text-center pt-2 pb-1"
+                            style={{
+                                color: currentPage === '/library' ? ACTIVE_COLOR : NORMAL_COLOR
+                            }}
+
+                        >
                             <svg width="25" height="25" viewBox="0 0 42 42" className="inline-block mb-1">
                                 <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                                     <path d="M14.7118754,20.0876892 L8.03575361,20.0876892 C5.82661462,20.0876892 4.03575361,18.2968282 4.03575361,16.0876892 L4.03575361,12.031922 C4.03575361,8.1480343 6.79157254,4.90780265 10.4544842,4.15995321 C8.87553278,8.5612583 8.1226025,14.3600511 10.9452499,15.5413938 C13.710306,16.6986332 14.5947501,18.3118357 14.7118754,20.0876892 Z M14.2420017,23.8186831 C13.515543,27.1052019 12.7414284,30.2811559 18.0438552,31.7330419 L18.0438552,33.4450645 C18.0438552,35.6542035 16.2529942,37.4450645 14.0438552,37.4450645 L9.90612103,37.4450645 C6.14196811,37.4450645 3.09051926,34.3936157 3.09051926,30.6294627 L3.09051926,27.813861 C3.09051926,25.604722 4.88138026,23.813861 7.09051926,23.813861 L14.0438552,23.813861 C14.1102948,23.813861 14.1763561,23.8154808 14.2420017,23.8186831 Z M20.7553776,32.160536 C23.9336213,32.1190063 23.9061943,29.4103976 33.8698747,31.1666916 C34.7935223,31.3295026 35.9925894,31.0627305 37.3154077,30.4407183 C37.09778,34.8980343 33.4149547,38.4450645 28.9036761,38.4450645 C24.9909035,38.4450645 21.701346,35.7767637 20.7553776,32.160536 Z" fill="currentColor" opacity="0.1"></path>
@@ -36,7 +49,13 @@ const BottomNavigation = () => {
                             </svg>
                             <span className="tab tab-kategori block text-xs">Library</span>
                         </a>
-                        <a href="/sell" className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
+                        <a href="/sell" className="w-full focus:text-white hover:text-white justify-center inline-block text-center pt-2 pb-1"
+                            style={
+                                {
+                                    color: currentPage === '/sell' ? ACTIVE_COLOR : NORMAL_COLOR
+                                }
+                            }
+                        >
                             <svg width="25" height="25" viewBox="0 0 42 42" className="inline-block mb-1">
                                 <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                                     <path d="M20.5890101,0.254646884 C12.8696785,5.50211755 8.0025785,14.258415 14.1941217,18.8708225 C23.16683,25.5550669 13.3362326,40.2698884 33.1021758,38.4149164 C29.6814884,40.8311956 25.5065164,42.2507054 21,42.2507054 C9.40202025,42.2507054 0,32.8486852 0,21.2507054 C0,9.79003409 9.18071714,0.473634138 20.5890101,0.254646884 Z" fill="currentColor" opacity="0.1"></path>
@@ -46,7 +65,11 @@ const BottomNavigation = () => {
                             </svg>
                             <span className="tab tab-explore block text-xs">Sell</span>
                         </a>
-                        <a href={"/account"} className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
+                        <a href={"/account"} className="w-full focus:text-white hover:text-white justify-center inline-block text-center pt-2 pb-1"
+                            style={{
+                                color: currentPage === '/account' ? ACTIVE_COLOR : NORMAL_COLOR
+                            }}
+                        >
                             <svg width="25" height="25" viewBox="0 0 42 42" className="inline-block mb-1">
                                 <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                                     <path d="M14.7118754,20.0876892 L8.03575361,20.0876892 C5.82661462,20.0876892 4.03575361,18.2968282 4.03575361,16.0876892 L4.03575361,12.031922 C4.03575361,8.1480343 6.79157254,4.90780265 10.4544842,4.15995321 C8.87553278,8.5612583 8.1226025,14.3600511 10.9452499,15.5413938 C13.710306,16.6986332 14.5947501,18.3118357 14.7118754,20.0876892 Z M14.2420017,23.8186831 C13.515543,27.1052019 12.7414284,30.2811559 18.0438552,31.7330419 L18.0438552,33.4450645 C18.0438552,35.6542035 16.2529942,37.4450645 14.0438552,37.4450645 L9.90612103,37.4450645 C6.14196811,37.4450645 3.09051926,34.3936157 3.09051926,30.6294627 L3.09051926,27.813861 C3.09051926,25.604722 4.88138026,23.813861 7.09051926,23.813861 L14.0438552,23.813861 C14.1102948,23.813861 14.1763561,23.8154808 14.2420017,23.8186831 Z M20.7553776,32.160536 C23.9336213,32.1190063 23.9061943,29.4103976 33.8698747,31.1666916 C34.7935223,31.3295026 35.9925894,31.0627305 37.3154077,30.4407183 C37.09778,34.8980343 33.4149547,38.4450645 28.9036761,38.4450645 C24.9909035,38.4450645 21.701346,35.7767637 20.7553776,32.160536 Z" fill="currentColor" opacity="0.1"></path>
