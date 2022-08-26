@@ -44,10 +44,10 @@ const Library = () => {
 
     return (
         <div>
-            <div className="p-5">
+            <div className="p-5 mb-5">
                 <PageHeader title={"Library"} type={"heading"} />
                 {/* Recommended: */}
-                <section>
+                <section className="my-2">
                     <div className="">
                         <PageHeader title={"Recommended"} type={"subheading"} />
                         <div>
@@ -61,7 +61,7 @@ const Library = () => {
                     </div>
                 </section>
                 {/* Browse All */}
-                <section>
+                <section className="my-2">
                     <div className="">
                         <PageHeader title={"Browse All"} type={"subheading"} />
                     </div>
@@ -73,8 +73,6 @@ const Library = () => {
                     }
                 </section>
             </div>
-
-
             <BottomNavigation />
         </div>
     )

@@ -9,7 +9,7 @@ const BottomNavigation = () => {
     console.log(currentPage);
     return (
         <div>
-            <div className="w-full h-screen">
+            <div className="w-full">
                 {/* <!-- <section id="bottom-navigation" className="md:hidden block fixed inset-x-0 bottom-0 z-10 bg-white shadow"> // if shown only tablet/mobile--> */}
                 <section id="bottom-navigation" className="block fixed inset-x-0 bottom-0 z-10  shadow text-[#B3B3B3] bg-gradient-to-b from-transparent via-black to-black">
                     <div id="tabs" className="flex justify-between ">

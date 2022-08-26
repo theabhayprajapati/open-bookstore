@@ -7,7 +7,7 @@ interface BoxProps {
 
 const Box: React.FC<BoxProps> = ({ name, bgColor }) => {
     return (
-        <div className="py-1  cursor-pointer 
+        <div className="py-1  cursor-pointer -z-50
         transition duration-200 ease-in-out transform hover:scale-105
         ">
             <div className="flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden">
