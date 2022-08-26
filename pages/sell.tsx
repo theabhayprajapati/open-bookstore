@@ -7,7 +7,9 @@ const Sell = () => {
 
         <div>
             <div className="p-5">
-                <PageHeader title={"Sell"} type={"heading"} />
+                <div className="top-0 sticky z-50 bg-black shadow-black h-10 flex flex-col self-start ">
+                    <PageHeader title={"Sell"} type={"heading"} />
+                </div>
                 {/* Sell a new product */}
                 {/* Your Proudcts */}
                 <section className="flex flex-col lg:flex-row my-2">
@@ -31,7 +33,7 @@ const Sell = () => {
                 <section className="flex flex-col lg:flex-row my-2">
                     <div className="flex-1">
                         <PageHeader title={"Your Products"} type={"subheading"} />
-                        {[...Array(2)].map((_, i) => (
+                        {[...Array(10)].map((_, i) => (
                             <Product name='Backpack' image='https://images.unsplash.com/photo-1494726161322-5360d4d0eeae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80' desc='Lorem ipsum dolor sit amet consectetur adipisicing elit In odit exercitationem fuga id nam quia' location='New York' price={220} />
                         ))}
                     </div>
