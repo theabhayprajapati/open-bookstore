@@ -7,7 +7,7 @@ const Sell = () => {
 
         <div>
             <div className="p-5">
-                <div className="top-0 sticky z-50 bg-black shadow-black h-10 flex flex-col self-start ">
+                <div className="top-0 sticky z-50 bg-black shadow-black h-15 pt-5 flex flex-col self-start ">
                     <PageHeader title={"Sell"} type={"heading"} />
                 </div>
                 {/* Sell a new product */}

@@ -45,7 +45,7 @@ const Library = () => {
     return (
         <div>
             <div className="p-5 mb-5">
-                <div className="top-0 sticky z-50 bg-black shadow-black h-15 flex flex-col self-start ">
+                <div className="top-0 sticky z-50 bg-black shadow-black h-15 pt-5 flex flex-col self-start ">
                     <PageHeader title={"Library"} type={"heading"} />
                 </div>
                 {/* Recommended: */}
