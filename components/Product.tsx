@@ -13,7 +13,7 @@ const Product: React.FC<Product> = ({ image, name, desc, location, price }) => {
     return (
 
 
-        <div className="py-6">
+        <div className="py-2">
             <div className="flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden">
                 <div className="w-1/3 bg-cover" style={{
                     backgroundImage: "url('https://images.unsplash.com/photo-1494726161322-5360d4d0eeae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80')"

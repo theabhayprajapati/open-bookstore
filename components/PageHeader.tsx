@@ -1,11 +1,20 @@
 
-const PageHeader = ({ title }: any) => {
+// props
+// title, type: enum {'heading', 'subheading'}
+interface PageHeaderProps {
+    title: string;
+    type: 'heading' | 'subheading';
+}
+
+const PageHeader = ({ title, type }: PageHeaderProps) => {
     return (
         <div className="lg:flex lg:items-center justify-between">
             <div className="flex-1 min-w-0 justify-between">
-                <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:tracking-tight sm:truncate"> {
-                    title
-                }
+                <h2 className={
+                    `text-${type === 'heading' ? '2xl' : 'xl'} font-bold leading-tight text-${type === 'heading' ? 'text-white' : 'text-white'}`
+                }> {
+                        title
+                    }
                 </h2>
             </div>
             <div className="mt-5 flex lg:mt-0 lg:ml-4">

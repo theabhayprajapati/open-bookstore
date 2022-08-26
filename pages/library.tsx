@@ -44,12 +44,12 @@ const Library = () => {
 
     return (
         <div>
-            <div className="p-5 border">
-                <PageHeader title={"Library"} />
+            <div className="p-5">
+                <PageHeader title={"Library"} type={"heading"} />
                 {/* Recommended: */}
                 <section>
                     <div className="">
-                        <PageHeader title={"Recommended"} />
+                        <PageHeader title={"Recommended"} type={"subheading"} />
                         <div>
                             {
                                 bookcategories.slice(0, 3).map((category, index) => (
@@ -62,8 +62,8 @@ const Library = () => {
                 </section>
                 {/* Browse All */}
                 <section>
-                    <div className=" border">
-                        <PageHeader title={"Browse All"} />
+                    <div className="">
+                        <PageHeader title={"Browse All"} type={"subheading"} />
                     </div>
                     {
                         bookcategories.slice(3, bookcategories.length).map((category, index) => (

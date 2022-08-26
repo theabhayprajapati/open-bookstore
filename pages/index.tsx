@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <title>Open Library</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="">
+      <main className="p-5">
         {login ? (
           <div className='grid 
             md:grid-cols-3 grid-cols-1 gap-2
